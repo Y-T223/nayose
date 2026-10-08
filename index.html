@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>名寄市北国博物館|雪国のくらしと蒸気機関車の記憶</title>
+<meta name="description" content="北海道名寄市の北国博物館。雪国のくらしを伝えるストーブの数々、鉄道模型、屋外に展示された蒸気機関車、木のおもちゃ。完全バリアフリー。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --boiler:#16251f;      /* 汽罐の深緑 */
+  --boiler-2:#1e3128;
+  --brass:#b3924f;       /* 真鍮 */
+  --brass-soft:#d4bb86;
+  --paper:#ebe3d0;       /* 生成りの紙 */
+  --paper-2:#e2d8c0;
+  --soot:#26221f;        /* 煤 */
+  --ink:#2b2622;
+  --serif:"Shippori Mincho","Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:2;font-size:16px;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--brass),transparent);border:0;margin:0}
+
+/* header */
+header{position:absolute;inset:0 0 auto 0;z-index:5;padding:22px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{color:var(--paper);text-decoration:none;font-weight:500;font-size:15px;letter-spacing:.2em}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{color:var(--paper);text-decoration:none;font-size:13px;letter-spacing:.18em;padding:6px 0;border-bottom:1px solid transparent}
+nav a:hover{border-color:var(--brass)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--boiler);color:var(--paper);display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;filter:sepia(.35) saturate(.85) contrast(1.02)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,37,31,.55) 0%,rgba(22,37,31,.15) 38%,rgba(22,37,31,.88) 100%)}
+.hero-inner{position:relative;z-index:2;width:min(1080px,100% - 48px);margin:0 auto;padding:0 0 84px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
+.plate{border:1px solid var(--brass);outline:1px solid var(--brass);outline-offset:5px;padding:34px 44px;background:rgba(22,37,31,.55);backdrop-filter:blur(2px)}
+.plate .kana{font-size:14px;letter-spacing:.5em;color:var(--brass-soft)}
+.plate h1{font-weight:700;font-size:clamp(34px,6vw,64px);letter-spacing:.14em;line-height:1.35;margin-top:6px}
+.plate p{margin-top:12px;font-size:15px;color:var(--paper-2)}
+.tategaki{writing-mode:vertical-rl;font-size:clamp(17px,2.2vw,24px);letter-spacing:.35em;line-height:2.2;color:var(--paper);text-shadow:0 1px 12px rgba(0,0,0,.6)}
+
+/* sections */
+section{padding:112px 0}
+h2{font-weight:700;font-size:clamp(25px,3.6vw,36px);letter-spacing:.2em;line-height:1.6}
+.lead{margin-top:20px;max-width:34em}
+.head{text-align:center;margin-bottom:64px}
+.head::after{content:"";display:block;width:56px;height:1px;background:var(--brass);margin:22px auto 0}
+.head .lead{margin-inline:auto}
+
+/* story */
+.story{background:var(--paper)}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.story h2{margin-bottom:28px}
+.story p+p{margin-top:1.2em}
+.story .year{display:inline-block;margin-top:28px;padding:6px 20px;border:1px solid var(--brass);color:var(--soot);font-size:14px;letter-spacing:.3em}
+.frame{position:relative;background:var(--paper-2)}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:sepia(.3) saturate(.9)}
+.frame::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--brass);z-index:-1}
+
+/* exhibits */
+.exhibits{background:var(--boiler);color:var(--paper)}
+.exhibits h2{color:var(--paper)}
+.ex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 48px}
+.ex figure{overflow:hidden;background:var(--boiler-2)}
+.ex img{width:100%;aspect-ratio:3/2;object-fit:cover;filter:sepia(.3) saturate(.9);transition:transform .8s ease}
+.ex:hover img{transform:scale(1.03)}
+.ex h3{margin-top:24px;font-size:22px;letter-spacing:.18em;font-weight:700;color:var(--brass-soft)}
+.ex p{margin-top:8px;font-size:15px;color:var(--paper-2);max-width:30em}
+.ex-note{grid-column:1/-1;text-align:center;border-top:1px solid rgba(179,146,79,.45);border-bottom:1px solid rgba(179,146,79,.45);padding:28px 0;font-size:17px;letter-spacing:.2em;color:var(--paper)}
+
+/* toys */
+.toys{background:var(--paper-2)}
+.toys .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.toys .frame::before{inset:-14px -14px 14px 14px}
+.toys h2{margin-bottom:24px}
+
+/* access feature */
+.care{background:var(--soot);color:var(--paper);text-align:center}
+.care h2{color:var(--brass-soft)}
+.care-list{list-style:none;margin:48px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-width:760px;border:1px solid rgba(179,146,79,.55)}
+.care-list li{padding:36px 24px}
+.care-list li+li{border-left:1px solid rgba(179,146,79,.55)}
+.care-list strong{display:block;font-size:20px;letter-spacing:.18em;color:var(--paper);margin-bottom:6px}
+.care-list span{font-size:14px;color:var(--paper-2)}
+
+/* voices */
+.voices{background:var(--paper)}
+.v-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.voice{background:var(--paper-2);border:1px solid var(--brass);padding:44px 40px 36px;position:relative}
+.voice::before{content:"“";position:absolute;top:2px;left:20px;font-size:72px;line-height:1;color:var(--brass)}
+.stars{color:var(--brass);letter-spacing:.15em;font-size:18px}
+.stars i{font-style:normal;color:#b9ac8e}
+.voice p{margin-top:12px;font-size:15px;line-height:2.05}
+.voice .who{margin-top:16px;font-size:13px;color:#6c6254}
+
+/* info + access */
+.info{background:var(--paper-2)}
+.info-table{width:100%;max-width:760px;margin:0 auto 72px;border-collapse:collapse}
+.info-table th,.info-table td{text-align:left;padding:20px 12px;border-bottom:1px solid rgba(179,146,79,.6);font-weight:400;vertical-align:top}
+.info-table th{width:9em;color:#6c5a33;letter-spacing:.2em;white-space:nowrap}
+.info-table td a{text-underline-offset:4px;word-break:break-all}
+.map{max-width:960px;margin:0 auto}
+.map-frame{border:1px solid var(--brass);padding:8px;background:var(--paper)}
+.map-frame iframe{display:block;width:100%;height:440px;border:0;filter:sepia(.35) saturate(.8)}
+.map-btn{text-align:center;margin-top:28px}
+.btn{display:inline-block;padding:16px 56px;background:var(--boiler);color:var(--paper);text-decoration:none;letter-spacing:.25em;font-size:15px;border:1px solid var(--brass);outline:1px solid var(--brass);outline-offset:4px;transition:background .3s,color .3s}
+.btn:hover{background:var(--brass);color:var(--boiler)}
+
+/* footer */
+footer{background:var(--boiler);color:var(--paper);text-align:center;padding:72px 0 40px}
+footer .name{font-size:22px;letter-spacing:.3em;font-weight:700}
+footer address{font-style:normal;margin-top:14px;font-size:14px;color:var(--paper-2);line-height:2}
+.sns{margin-top:28px;display:flex;justify-content:center;gap:18px}
+.sns a{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--brass);border-radius:50%;color:var(--brass-soft);transition:background .3s,color .3s}
+.sns a:hover{background:var(--brass);color:var(--boiler)}
+.sns svg{width:22px;height:22px}
+small{display:block;margin-top:48px;font-size:12px;color:#9c9582;letter-spacing:.12em}
+
+@media (max-width:820px){
+  nav{display:none}
+  section{padding:80px 0}
+  .hero-inner{flex-direction:column;align-items:flex-start;padding-bottom:56px}
+  .tategaki{display:none}
+  .plate{padding:26px 26px}
+  .story .wrap,.toys .wrap{grid-template-columns:1fr;gap:56px}
+  .toys .frame{order:-1}
+  .ex-grid,.v-grid{grid-template-columns:1fr}
+  .care-list{grid-template-columns:1fr}
+  .care-list li+li{border-left:0;border-top:1px solid rgba(179,146,79,.55)}
+  .info-table th{display:block;width:auto;padding-bottom:0;border-bottom:0}
+  .info-table td{display:block;padding-top:4px}
+  .map-frame iframe{height:340px}
+  .btn{padding:16px 36px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ex img,.btn,.sns a{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">名寄市北国博物館</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="#story">はじまり</a></li>
+        <li><a href="#exhibits">展示</a></li>
+        <li><a href="#voices">口コミ</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-img">
+      <img src="images/hero-sl.jpg" alt="名寄市北国博物館の屋外に展示された蒸気機関車">
+    </div>
+    <div class="hero-inner">
+      <div class="plate">
+        <div class="kana">きたぐにはくぶつかん</div>
+        <h1>名寄市<br>北国博物館</h1>
+        <p>雪国のくらしと、蒸気機関車の記憶。</p>
+      </div>
+      <p class="tategaki" aria-hidden="true">雪の町に、汽笛の記憶を。</p>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- Story -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <div>
+        <h2>ひとりの収集から、<br>この館は始まった。</h2>
+        <p>金田一豊がキマロキ(蒸気機関車)の資料を集め、2005年に博物館を開館させました。</p>
+        <p>雪国の厳しいくらしを物語るストーブの数々、細部まで再現された建物の展示、そして館の外で迫力を放つSL。ここには、北国で積み重ねられてきた時間が静かに並んでいます。</p>
+        <span class="year">2005年 開館</span>
+      </div>
+      <div class="frame">
+        <img src="images/stove-exhibit.jpg" alt="雪国のくらしを伝える館内の石炭ストーブの展示" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Exhibits -->
+  <section class="exhibits" id="exhibits">
+    <div class="wrap">
+      <div class="head">
+        <h2>展示のみどころ</h2>
+        <p class="lead">来館者の声から、特に心に残る展示をご紹介します。</p>
+      </div>
+      <div class="ex-grid">
+        <article class="ex">
+          <figure><img src="images/hero-sl.jpg" alt="屋外に展示された蒸気機関車" loading="lazy"></figure>
+          <h3>屋外の蒸気機関車</h3>
+          <p>館の外に佇むSLは、間近で見上げるほどの迫力。ツーリングの途中に立ち寄った方も圧倒されたと語ります。</p>
+        </article>
+        <article class="ex">
+          <figure><img src="images/railway-model.jpg" alt="宗谷線を中心とした北海道の車両の鉄道模型" loading="lazy"></figure>
+          <h3>圧巻の鉄道模型</h3>
+          <p>宗谷線を中心に、北海道の車両が走る鉄道模型。見応えのある展示として好評です。</p>
+        </article>
+        <div class="ex-note">昔の石炭ストーブの数々、壁の中の断熱材まで再現した建物の展示も、見逃せません。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wooden toys -->
+  <section class="toys">
+    <div class="wrap">
+      <div class="frame">
+        <img src="images/wooden-toys.jpg" alt="長く愛用できる木のおもちゃ" loading="lazy">
+      </div>
+      <div>
+        <h2>木のおもちゃの、<br>ぬくもりを。</h2>
+        <p class="lead">プラスチック製品がほとんどとなったおもちゃの時代に、長く愛用できる木のおもちゃのよさを伝えています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barrier-free -->
+  <section class="care">
+    <div class="wrap">
+      <h2>どなたにも、やさしい館内。</h2>
+      <ul class="care-list">
+        <li><strong>完全バリアフリー</strong><span>駐車場から館内まで段差がありません。</span></li>
+        <li><strong>タブレット貸出</strong><span>館内でご利用いただけるタブレットをお貸しします。</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Voices -->
+  <section class="voices" id="voices">
+    <div class="wrap">
+      <div class="head">
+        <h2>ご来館者の声</h2>
+      </div>
+      <div class="v-grid">
+        <article class="voice">
+          <div class="stars" aria-label="5点中4点">★★★★<i>★</i></div>
+          <p>キマロキイベントにちなんでミニ新幹線やキッチンカーなどが来てました!中は有料施設以外は無料で開放されてるってすごいですね!鉄道模型には圧巻でした。車両も宗谷線中心として北海道の車両が入ってたのが良いですね。ハンバーガーはめちゃくちゃ美味かった!パンのお土産も好評で、キマロキをイメージした黒いパンがよかったです。このようなイベントをちょこちょこやってくれたらまた行きたいです!</p>
+        </article>
+        <article class="voice">
+          <div class="stars" aria-label="5点中5点">★★★★★</div>
+          <p>ツーリングの途中で訪問。雪国の厳しい生活がよくわかります。ストーブの数々は見ものです。昔の石炭いれて使うストーブは風情があっていいですね。建物の展示で壁の中の断熱材の再現が細かくてびっくりしました。特筆すべきは外のSLです!これはすごい迫力です!!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info + Access -->
+  <section class="info" id="access">
+    <div class="wrap">
+      <div class="head">
+        <h2>ご案内・アクセス</h2>
+      </div>
+
+      <table class="info-table">
+        <tr><th scope="row">施設名</th><td>名寄市北国博物館</td></tr>
+        <tr><th scope="row">住所</th><td>名寄市字緑丘222番地</td></tr>
+        <tr><th scope="row">定休日</th><td>毎週月曜日、年末年始</td></tr>
+        <tr><th scope="row">電話番号</th><td><a href="tel:01654-3-2575">01654-3-2575</a></td></tr>
+        <tr><th scope="row">メール</th><td><a href="mailto:ny-kitahaku@city.nayoro.lg.jp">ny-kitahaku@city.nayoro.lg.jp</a></td></tr>
+        <tr><th scope="row">公式サイト</th><td><a href="http://www.city.nayoro.lg.jp/section/museum/index.html" target="_blank" rel="noopener">http://www.city.nayoro.lg.jp/section/museum/index.html</a></td></tr>
+      </table>
+
+      <div class="map">
+        <div class="map-frame">
+          <iframe
+            title="名寄市北国博物館の地図"
+            src="https://www.google.com/maps?q=%E5%90%8D%E5%AF%84%E5%B8%82%E5%AD%97%E7%B7%91%E4%B8%98222%E7%95%AA%E5%9C%B0&output=embed&hl=ja"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <div class="map-btn">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E5%AF%84%E5%B8%82%E5%8C%97%E5%9B%BD%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%90%8D%E5%AF%84%E5%B8%82%E5%AD%97%E7%B7%91%E4%B8%98222%E7%95%AA%E5%9C%B0" target="_blank" rel="noopener">地図を開く</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="name">名寄市北国博物館</p>
+    <address>
+      名寄市字緑丘222番地<br>
+      TEL 01654-3-2575
+    </address>
+    <div class="sns">
+      <a href="https://www.instagram.com/nayoro_museum/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4.2"/>
+          <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+    <small>&copy; 名寄市北国博物館</small>
+  </div>
+</footer>
+
+</body>
+</html>
